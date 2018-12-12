@@ -1,16 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppComponent } from './app.component';
+// mdb bootstrap
+import { MDBBootstrapModule } from "angular-bootstrap-md";
+
+
+import { AppComponent } from '@prova/app.component';
+import { FiglioComponent } from '@prova/components/figlio/figlio.component';
+import { ProvaService } from './services/prova.service';
+
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, FiglioComponent],
+  imports: [BrowserModule, MDBBootstrapModule.forRoot()],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
